@@ -1,16 +1,17 @@
 #! /bin/sh
 
 sxhkd &
-feh --bg-scale "/home/labibmahmud/.pictures/background.jpg" &
-xfce4-panel &
-exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
+feh --bg-scale "/home/labibmahmud/.config/bspwm/background.jpg" &
+polybar -c /home/labibmahmud/.config/polybar/config-b mybar -r &
 compton -f &
+exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
+
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         1
 bspc config top_padding         30
-bspc config bottom_padding      30
+# bspc config bottom_padding      30
 bspc config window_gap           5
 
 bspc config split_ratio          0.50
