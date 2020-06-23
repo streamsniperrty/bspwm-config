@@ -1,16 +1,26 @@
 #! /bin/sh
 
 sxhkd &
+# Uncomment the xbindkeys line if you want to use xbindkeys as well.
+# xbindkeys &
 feh --bg-scale "/home/labibmahmud/.config/bspwm/background.jpg" &
-polybar -c /home/labibmahmud/.config/polybar/config-b mybar -r &
+# feh --bg-max "/home/labibmahmud/.config/bspwm/interesting.jpg" &
+$HOME/.config/polybar/launch.sh &
 compton -f &
 exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
 
+# Sets dual monitors, change HDMI1 to your according output
+# xrandr --output eDP1 --auto --output HDMI1 --right-of eDP1 &
+
+# Set second monitor as primary monitor, change HDMI1 to your according output
+# xrandr --output eDP1 --off --output HDMI1 --auto &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
+# bspc monitor eDP1 -d  I II III IV V
+# bspc monitor HDMI1 -d VI VII VIII IX X
 
 bspc config border_width         1
-bspc config top_padding         30
+bspc config top_padding         20
 # bspc config bottom_padding      30
 bspc config window_gap           5
 
