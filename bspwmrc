@@ -2,8 +2,7 @@
 
 sxhkd &
 xbindkeys &
-feh --bg-scale "/home/labibmahmud/.config/backgrounds/city.jpg" &
-# feh --bg-max "/home/labibmahmud/.config/backgrounds/anime.jpg" &
+feh --bg-scale "/home/labibmahmud/.config/wallpapers/city.jpg" &
 $HOME/.config/polybar/launch.sh &
 compton -f &
 exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
@@ -41,4 +40,3 @@ bspc config active_border_color \#ffffff
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a Lightworks state=fullscreen
